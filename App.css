@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+    height: 100vh;
+
+}
+.App .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+.App .box .singlePhone {
+  box-shadow: 2px 2px 10px 5px #ccc;
+  border-radius: 5px;
+  width: 19%;
+  transition: 0.5s all ease-in-out;
+}
+.App .box .singlePhone:hover {
+  transition: 0.5s all ease-in-out;
+  transform: translateY(-10px);
+}
+.App .box .singlePhone img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+.App .box .singlePhone .content h2 {
+  color: #318672;
+  text-align: center;
+}
+.App .box .singlePhone .content h4 {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  margin:10px;
+}
+.App .box .singlePhone .content h4 span {
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  padding-right: 10px;
+}
+
+.themeBtn {
+  display: inline-flex;
+  background-color: transparent;
+  padding: 9px 14px;
+  color: #10362d;
+  font-weight: 500;
+  font-size: clamp(12px, 0.72916vw, 14px);
+  text-decoration: none;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  border-radius: 10px;
+  border:1px solid #10362d;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.themeBtn::before {
+  content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #433266;
+    top: 22px;
+    left: -22px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+.themeBtn:hover::before {
+  border-radius: 0;
+  opacity: 1;
+  transform: scale(7) rotate(45deg);
+  top: 0;
+  left: 0;
+}
+.themeBtn:hover {
+  color: #EFBA00;
+  transition: all 0.5s ease-in-out;
+}
